@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Name of the stage -2') {
             environment{
-                ENV_URL="localvar.google.com"
+                ENV_URL="localvar.google.com"   //pipeline local variable will have higher priority thatn global
             }
            steps{
             sh "echo Name of the varialble is ${ENV_URL}"
