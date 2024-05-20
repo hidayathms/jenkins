@@ -17,8 +17,10 @@ pipeline {
     
     // triggers { cron('*/1 * * * *') } //schedlue to run the job 
 
-    triggers { pollSCM('*/1 * * * *') }  //schedlue to run only when there is change in code or modification or new version release
-    
+    // triggers { pollSCM('*/1 * * * *') }  //schedlue to run only when there is change in code or modification or new version release
+    options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
     stages {
         stage ('Name of the stage -1') {
            steps{
