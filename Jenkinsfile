@@ -26,7 +26,7 @@ pipeline {
            steps{
             sh "echo Name of the varialble is ${ENV_URL}"
             sh "env"
-            SH "sleep 150"
+            sh "sleep 150"
            }
         }
         stage ('Name of the stage -2') {
