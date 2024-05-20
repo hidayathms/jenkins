@@ -44,7 +44,7 @@ pipeline {
                 }
                 stage('Download -2') {
                     steps {
-                       sh "echo "Download in progress""
+                       sh "echo Download in progress"
                        sh "sleep 120"
                     }
                 }
