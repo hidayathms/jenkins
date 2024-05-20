@@ -21,6 +21,11 @@ pipeline {
     options {
         timeout(time: 1, unit: 'MINUTES') 
     }
+    
+    tools {
+        maven 'maven-390' 
+    }
+
     stages {
         stage ('Name of the stage -1') {
            steps{
