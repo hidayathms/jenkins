@@ -9,7 +9,7 @@ pipeline {
     
     environment {
         ENV_URL="globalvar.google.com"   // pipeline global variable
-        SSH_CRED=credentials('SSH_CRED')
+        SSH_CRED=credentials('SSH_CREDENTIALS')
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Adam', description: 'Who should I say hello to?')
