@@ -41,7 +41,7 @@ pipeline {
         }
         stage ('Name of the stage -3') {
            steps{
-            sh "echo step1"
+            sh "mvn"
             sh "echo step2"
             sh "echo step3"
            }
