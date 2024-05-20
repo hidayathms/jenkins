@@ -15,7 +15,9 @@ pipeline {
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     
-    triggers { cron('*/1 * * * *') }
+    // triggers { cron('*/1 * * * *') } //schedlue to run the job 
+
+    triggers { pollSCM('*/1 * * * *') }  //schedlue to run only when there is change in code or modification or new version release
     
     stages {
         stage ('Name of the stage -1') {
