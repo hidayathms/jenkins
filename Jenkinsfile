@@ -34,6 +34,21 @@ pipeline {
             // sh "sleep 150"
            }
         }
+        stage ('Demo on parallel stages')
+        parallel {
+                stage('Download -1') {
+                     steps {
+                        sh "echo Download in progress"
+                        sh "sleep 120"
+                    }
+                }
+                stage('Download -2') {
+                    steps {
+                       sh "echo "Download in progress""
+                       sh "sleep 120"
+                    }
+                }
+        }
         stage ('Name of the stage -2') {
             environment{
                 ENV_URL="localvar.google.com"   //pipeline local variable will have higher priority thatn global
