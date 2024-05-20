@@ -2,7 +2,11 @@
 // refernce document https://www.jenkins.io/doc/book/pipeline/syntax/#environment
 
 pipeline {
-    agent any
+    // agent any    //means it runs on any of the availble node
+    agent {
+        label 'ws'
+    }
+    
     environment {
         ENV_URL="globalvar.google.com"   // pipeline global variable
         SSH_CRED=credentials('SSH_CRED')
@@ -31,6 +35,7 @@ pipeline {
            steps{
             sh "echo Name of the varialble is ${ENV_URL}"
             sh "env"
+            sh "hostname"
             // sh "sleep 150"
            }
         }
