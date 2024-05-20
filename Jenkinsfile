@@ -19,13 +19,14 @@ pipeline {
 
     // triggers { pollSCM('*/1 * * * *') }  //schedlue to run only when there is change in code or modification or new version release
     options {
-        timeout(time: 1, unit: 'HOURS') 
+        timeout(time: 1, unit: 'MINUTES') 
     }
     stages {
         stage ('Name of the stage -1') {
            steps{
             sh "echo Name of the varialble is ${ENV_URL}"
             sh "env"
+            SH "sleep 150"
            }
         }
         stage ('Name of the stage -2') {
