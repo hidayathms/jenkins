@@ -34,7 +34,7 @@ pipeline {
             // sh "sleep 150"
            }
         }
-        stage ('Demo on parallel stages')
+        stage ('Demo on parallel stages'){
         parallel {
                 stage('Download -1') {
                      steps {
@@ -48,6 +48,7 @@ pipeline {
                        sh "sleep 120"
                     }
                 }
+            }
         }
         stage ('Name of the stage -2') {
             environment{
