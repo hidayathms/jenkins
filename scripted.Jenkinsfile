@@ -3,12 +3,12 @@ node {
         print 'Hello World'
     }
     if (env.TAG_NAME == "") {
-        stage ('Todays Session')
-            print 'Todays session is History'
+        stage ('Runs on Tag Name')
+            print 'Runs on Tag'
         }
     else {
-        stage ('Tommorows Session') {
-            print 'Todays session is Maths'
+        stage ('Runs on Branch Name') {
+            print 'Runs on Branc'
         }
     }
 
